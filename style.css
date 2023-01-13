@@ -1,0 +1,550 @@
+/*
+1. Posicionamiento
+2. Modelo Caja (Box Model)
+3. Tipografía
+4. Estilos efectos visuales (shadow box, border radius)
+5. Misselaneus u otros 
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+     /* Colores */
+  --bitcoin-orange:#F7931A;
+  --soft-orange:#FFE9D4;
+  --secondary-blue:#1A9AF7;
+  --soft-blue:#E7F5FF;
+  --warm-black:#201E1C;
+  --just-black: #282623;
+  --grey: #BABABA;
+  --off-white: #FAF8F7;
+  --just-white: #ffffff; 
+}
+
+html {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 62.5%;
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: 334px;
+    text-align: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+header img {
+    width: 150px;
+    height: 24px;
+    margin-top: 60px;
+    align-self: center;
+}
+.header--title-container {
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    height: 218px;
+    margin-top: 30px;
+    text-align: center;
+    align-self: center;
+}
+
+.header--title-container  h1{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+
+}
+.header--title-container p{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--soft-orange);
+    margin-top: 30px;
+
+}
+.header--title-container .header--button {
+    position: absolute;
+    top: 270px;
+    left: calc(50% - 118px);
+    display: block;
+    margin-top: 35px;
+    padding: 16px;
+    width: 229px;
+    height: 50px;
+    background-color: var(--off-white);
+    /*Sombras*/
+    box-shadow: 0px 4px 8px 0px rgba(89, 73, 30, 0.16);
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--warm-black);
+}
+.header--button span{
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 5px;
+    background-image: url('./assets/icons/down-arrow.svg');
+}
+main {
+    width: 100%;
+    height: auto;
+    background-color: var(--off-white);
+}
+
+.main-exchange-container {
+    width: 100%;
+    height: auto;
+    padding-top: 55px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.main-exchange-container .backgroundImg{
+    width: 195px;
+    height: 195px;
+    margin: 0px auto;
+    margin-bottom: 50px;
+    background-image: url(./assets/img/Bitcoin.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.main-exchange-container--title {
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto; 
+    width: 90%;
+}
+.main-exchange-container--title h2{
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    margin-bottom: 30px;
+    color: var(--warm-black);
+}
+.main-exchange-container--title p{
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #757575;
+}
+    /* Primer Slider */
+.main-tables-container{
+    display: flex;
+    overflow-x: scroll; 
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    margin: 20px 30px;
+    padding-bottom: 20px;
+
+}
+.main-currency-table {
+   position: relative;
+   scroll-snap-align: center;
+   width: 70%;
+   min-width: 235px;
+   max-width: 500px;
+   height: 360px;
+   margin: 0 auto;
+   font-family: 'Inter', sans-serif;
+}
+.main-currency-table .currency-table--title{
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: var(--bitcoin-orange);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.currency-table--container {
+    width: 90%;
+   min-width: 230px;
+   max-width: 300px;
+   height: 250px;
+   margin: 0 auto;
+}
+.currency-table--container table{
+   width: 100%;
+   height: 100%;
+
+}
+.currency-table--container td{
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.936rem;
+    color: var(--grey);
+    background-color: var(--just-white);
+ }
+
+ .currency-table--container .table__top-left {
+    border-radius: 15px 0 0 0;
+ }
+ .currency-table--container .table__top-right {
+    border-radius: 0 15px 0 0;
+ }
+ .currency-table--container .table__bottom-left {
+    border-radius: 0 0 0 15px;
+ }
+ .currency-table--container .table__bottom-right {
+    border-radius: 0 0 15px 0;
+ }
+
+ .currency-table--container .table__right {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.694rem;
+    color: #757575;
+ }
+ .currency-table--container .down {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url('./assets/icons/trending-down.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+ .currency-table--container .up {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url('./assets/icons/trending-up.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+ .currency-table-date {
+    width: 193px;
+    height: 31px;
+    padding: 8px;
+    background-color: var(--soft-orange);
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-top: 15px;
+ }
+ .currency-table-date1 {
+    width: 193px;
+    height: 31px;
+    padding: 8px;
+    background-color: var(--soft-blue);
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-top: 15px;
+ }
+ .currency-table-date p{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--warm-black);
+ }
+
+ .commissions-table--date {
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 235px;
+    max-width: 500px;
+    height: 360px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+ }
+ .comissions-table--title {
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: var(--secondary-blue);
+    margin-top: 30px;
+    margin-bottom: 15px;
+ }
+
+  /* Contenedor principal negro */
+ .main-product-detail {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    background-color: var(--warm-black);
+    padding: 20px 10px;
+    
+ }
+
+ .main-product-detail .batata-logo{
+    position: absolute;
+    display: inline-block;
+    width: 41px;
+    height: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('./assets/icons/batata.svg');
+    top: -10px;
+    left: calc(50% - 20px);
+ }
+ .main-product-detail--title {
+    width: 90%;
+    min-width: 288px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+ }
+ .main-product-detail--title h2 {
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    margin: 25px 0 20px 0;
+    color: var(--just-white);
+ }
+ .main-product-detail--title p{
+    color: #808080;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+ }
+    /* Cards */
+ .product-detail--card{
+    width: 90%;
+    min-width: 288px;
+    max-width: 400px;
+    min-height: 152px;
+    background-color: var(--just-black);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+    margin: 15px auto;
+    padding: 15px;
+}
+
+.product-detail--card .clock{
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-image: url('./assets/icons/clock.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    /* margin-left: 15px; */
+ }
+ .product-detail--card .eye{
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-image: url('./assets/icons/eye.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    /* margin-left: 15px; */
+ }
+ .product-detail--card .dolar{
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-image: url('./assets/icons/dollar-sign.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    /* margin-left: 15px; */
+ }
+ .product-detail--card .check{
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-image: url('./assets/icons/check-circle.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+        /* margin-left: 15px; */
+    margin-bottom: 10px;
+ }
+
+.product-card--title{
+    color: var(--just-white);
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    margin-bottom: 15px;
+    /* padding: 10px 15px 10px; */
+}
+.product-card--body {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #808080;
+    /* padding: 0px 15px; */
+}
+ /* Contenedor Comodin */
+ .bitcoin-img-container {
+    width: 100%;
+    min-width: 320px;
+    min-height: 375px;
+    height: 100%;
+    background-image: url('./assets/img/bitcoinbaby2x.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+ .bitcoin-img-container h2{
+    padding-top: 60px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+    text-align: center;
+}
+ /* Contenedor Planes */
+.main-plans-container {
+    width: 100%;
+    min-width: 320px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+.plans--title {
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.plans--title h2{
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    padding-top: 50px;
+    color: var(--warm-black);
+}
+.plans--title p {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    padding-top: 30px;
+    color:#757575;
+}
+ /* Slider */
+.plans-container--slider{
+    display: flex;
+    height: 316px;
+    overflow-x: scroll; 
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    margin: 0 18px;
+}
+.plans-container--card{
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%; /*para hacer la tarjeta más pequeña*/
+    min-width: 190px;
+    max-width: 300px;
+    height: 250px;
+    padding: 0 15px;
+    background-color: var(--just-white);
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border-radius: 8px;
+    margin: 50px 5px 0;
+}
+.plan-card-title {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    padding-top: 30px;
+    color: var(--warm-black);
+}
+.plan-card-price {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 6.3rem;
+    letter-spacing: -0.08em;
+    color: #000000;
+}
+.plan-card-price span {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    vertical-align: 30px;
+}
+.recomendado {
+    position: absolute;
+    width: 115px;
+    height: 31px;
+    top: -15px;
+    left: calc(50% - 60px);
+    background-color: var(--bitcoin-orange);
+    border-radius: 5px;
+    color: var(--just-white);
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+    padding: 6.5px;
+}
+.plan-card--saving {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #757575;
+    padding: 10px;
+    text-align: center;
+}
+.plan-card--ca {
+    width: 150px;
+    height: 48px;
+    border: 2px solid var(--bitcoin-orange);
+    background-color: var(--off-white);
+    border-radius: 5px;
+    /* padding: 12px 16px; */
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--black);
+}
+.plan-card--ca span {
+    display: inline-block;
+    background-image: url("./assets/icons/orange-right-arrow.svg");
+    width: 20px;
+    height: 20px;
+    vertical-align: text-bottom;
+}
+footer {
+    display: flex;
+    background-color: var(--bitcoin-orange);
+    width: 100%;
+    height: 150px;
+}
+footer section{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer-left ul{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none; 
+    
+}
+footer .footer-left a{
+    text-decoration: none;
+    color: var(--just-white);
+}
+footer .footer-left li{
+    margin: 10px 0px;
+    padding-left: 20px;
+}
+footer .footer-left a:hover {
+    text-decoration: underline;
+    color: var(--soft-orange);
+}
